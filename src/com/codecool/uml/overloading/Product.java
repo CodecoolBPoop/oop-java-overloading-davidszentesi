@@ -4,6 +4,7 @@ import java.util.Currency;
 import java.util.List;
 
 public class Product {
+    private static int lastId;
     private int id;
     private String name;
     private float defaultPrice;
@@ -13,11 +14,14 @@ public class Product {
     private List<Product> productList;
 
     public Product() {
-        //TODO
+        id = ++lastId;
     }
 
     public Product(String name, float defaultPrice, Currency defaultCurrency) {
-        //TODO
+        this();
+        this.name = name;
+        this.defaultPrice = defaultPrice;
+        this.defaultCurrency = defaultCurrency;
     }
 
     public int getId() {

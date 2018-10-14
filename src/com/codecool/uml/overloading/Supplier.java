@@ -3,16 +3,19 @@ package com.codecool.uml.overloading;
 import java.util.List;
 
 public class Supplier {
+    private static int lastId;
     private int id;
     private String name;
     private String description;
 
     public Supplier() {
-        //TODO
+        id = ++lastId;
     }
 
     public Supplier(String name, String description) {
-        //TODO
+        this();
+        this.name = name;
+        this.description = description;
     }
 
     public int getId() {

@@ -3,17 +3,21 @@ package com.codecool.uml.overloading;
 import java.util.List;
 
 public class ProductCategory {
+    private static int lastId;
     private int id;
     private String name;
     private String department;
     private String description;
 
     public ProductCategory() {
-        //TODO
+        id = ++lastId;
     }
 
     public ProductCategory(String name, String department, String description) {
-        //TODO
+        this();
+        this.name = name;
+        this.department = department;
+        this.description = description;
     }
 
     public int getId() {
