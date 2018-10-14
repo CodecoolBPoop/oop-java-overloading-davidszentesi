@@ -48,12 +48,9 @@ public class ProductCategory {
         this.description = description;
     }
 
-    /*
     public List<Product> getProducts() {
-        //TODO
-        return productList;
+        return Product.getAllProductsBy(this);
     }
-    */
 
     @Override
     public String toString() {

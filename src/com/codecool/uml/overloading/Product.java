@@ -1,5 +1,6 @@
 package com.codecool.uml.overloading;
 
+import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class Product {
     private Currency defaultCurrency;
     private ProductCategory productCategory;
     private Supplier supplier;
-    private List<Product> productList;
+    private static List<Product> productList = new ArrayList<>();
 
     public Product() {
         id = ++lastId;
@@ -68,13 +69,21 @@ public class Product {
         this.supplier = supplier;
     }
 
-    public List<Product> getAllProductsBy(ProductCategory productCategory) {
-        //TODO
+    public static List<Product> getAllProductsBy(ProductCategory productCategory) {
+        for (Product product : productList) {
+            if (product.getProductCategory().equals(productCategory)) {
+                productList.add(product);
+            }
+        }
         return productList;
     }
 
-    public List<Product> getAllProductsBy(Supplier supplier) {
-        //TODO
+    public static List<Product> getAllProductsBy(Supplier supplier) {
+        for (Product product : productList) {
+            if (product.getSupplier().equals(supplier)) {
+                productList.add(product);
+            }
+        }
         return productList;
     }
 
