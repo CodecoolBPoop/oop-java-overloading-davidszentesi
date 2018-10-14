@@ -7,13 +7,16 @@ public class FeaturedProductCategory extends ProductCategory {
     private Date endDate;
 
     public void schedule(Date startDate, Date endDate) {
-        //TODO
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     @Override
     public String toString() {
-        //TODO
-        return String;
+        return this.getClass().getSimpleName() +
+                ": " +
+                "startDate=" + startDate +
+                ", endDate=" + endDate;
     }
 
 }

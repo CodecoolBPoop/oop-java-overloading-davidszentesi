@@ -80,8 +80,15 @@ public class Product {
 
     @Override
     public String toString() {
-        //TODO
-        return String;
+        return this.getClass().getSimpleName() +
+                ": " +
+                "id:" + id +
+                ", name:'" + name + '\'' +
+                ", defaultPrice:" + defaultPrice +
+                ", defaultCurrency:" + defaultCurrency +
+                ", productCategory:" + productCategory +
+                ", supplier:" + supplier +
+                ", productList:" + productList;
     }
 
 }

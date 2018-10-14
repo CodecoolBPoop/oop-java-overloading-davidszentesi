@@ -38,15 +38,20 @@ public class Supplier {
         this.description = description;
     }
 
+    /*
     public List<Product> getProducts() {
         //TODO
         return productList;
     }
+    */
 
     @Override
     public String toString() {
-        //TODO
-        return String;
+        return this.getClass().getSimpleName() +
+                ": " +
+                "id:" + id +
+                ", name:'" + name + '\'' +
+                ", description:'" + description + '\'';
     }
 
 }
